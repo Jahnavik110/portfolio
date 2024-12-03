@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+}
+/* Profile Picture Styles */
+.sidebar .profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+  /* Optional: Adding a smooth border effect by default */
+  border: 2px solid #0f0f0f;
+}
+
+/* Glowing Border Effect on Hover */
+.sidebar .profile-pic:hover {
+  box-shadow: 0 0 20px 5px rgba(221, 239, 236, 0.8); /* Green glowing effect */
+  border: 3px solid #cfe8e5; /* Slightly bigger border on hover */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: #21614c;
+  box-shadow: 0 0 10px #101010; /* Hover glow */
+}
+
+.nav-menu a.active {
+  background-color: #21614c;
+  box-shadow: 0 0 15px #0e0e0e; /* Persistent glow for active link */
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+  width: 20%;
+  background-color: #2b6059;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+}
+
+.sidebar .profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: #21614c;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 20%;
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section {
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Glowing effect when hovering over sections */
+.section:hover {
+  box-shadow: 0 0 20px 5px rgba(218, 247, 4, 0.7); /* Green glow */
+}
+
+.section h2 {
+  color: #2b6059;
+  font-size: 1.8rem;
+}
+
+.section p, .section ul {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  max-width: 1500px;
+  margin-top: 50px;
+  background: linear-gradient(to right, #10796b, #2b6059); /* Green gradient background */
+  padding: 100px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Typewriter Animation */
+.typewriter {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white; /* Change typewriter text color to white */
+  border-right: 3px solid white;
+  padding-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Shiny Text Effect with Dark Green */
+.shiny-text {
+  position: relative;
+  display: inline-block;
+  color: #f3ff0c; /* Dark Green Color */
+  font-weight: bold;
+  text-shadow: 
+    0 0 5px #10796b,  /* Light glow */
+    0 0 10px #10796b, /* More glow */
+    0 0 15px #10796b, /* Intense glow */
+    0 0 20px #10796b, /* Even more glow */
+    0 0 25px #10796b; /* Strongest glow */
+  animation: shiny-animation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes shiny-animation {
+  0% {
+    text-shadow: 0 0 5px #10796b, 0 0 10px #10796b, 0 0 15px #10796b, 0 0 20px #10796b;
+  }
+  100% {
+    text-shadow: 0 0 25px #10796b, 0 0 35px #10796b, 0 0 45px #10796b, 0 0 55px #10796b;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16ch; /* Adjust based on the length of your text */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Active link styling */
+.sidebar-link.active {
+  background-color: #21614c;
+  color: white;
+}
+
+/* Social Icon Styles */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #10796b; /* Green hover effect */
+}
